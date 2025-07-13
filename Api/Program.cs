@@ -43,6 +43,7 @@ app.MapGet("/weatherforecast", () =>
     return forecast;
 })
 .WithName("GetWeatherForecast");
+app.MapHealthChecks("/healthz");
 app.MapEndpoints();
 app.UseEndpoints(e =>
 {
