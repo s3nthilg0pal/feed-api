@@ -19,7 +19,9 @@ public class GetAllArticlesQueryHandler : IRequestHandler<GetAllArticlesQuery, I
     }
     public async Task<IEnumerable<ArticleDto>> Handle(GetAllArticlesQuery request, CancellationToken cancellationToken)
     {
-        var articles = await _feedContext.Articles.Where(a => a.Categories != "news").Select(a => new ArticleDto()
+        var articles = await _feedContext.Articles
+            .Where(a => a.Categories != "news" || a.Categories != "awesome")
+            .Select(a => new ArticleDto()
         {
             Content = a.Content,
             Link = a.Link,

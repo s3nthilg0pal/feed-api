@@ -2,6 +2,7 @@ using Api.Infrastructure;
 using Application;
 using Infrastructure;
 using Microsoft.AspNetCore.Hosting;
+using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,7 +21,7 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.MapHealthChecks("/health");
+app.UseHttpMetrics();
 app.UseHttpsRedirection();
 
 var summaries = new[]
@@ -41,6 +42,7 @@ app.MapGet("/weatherforecast", () =>
     return forecast;
 })
 .WithName("GetWeatherForecast");
+app.MapMetrics();
 app.MapEndpoints();
 app.Run();
 
