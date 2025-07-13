@@ -22,8 +22,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpMetrics();
-app.UseMetricServer();
 app.UseHttpsRedirection();
+app.UseRouting();
 
 var summaries = new[]
 {
@@ -43,8 +43,11 @@ app.MapGet("/weatherforecast", () =>
     return forecast;
 })
 .WithName("GetWeatherForecast");
-app.MapMetrics();
 app.MapEndpoints();
+app.UseEndpoints(e =>
+{
+    e.MapMetrics();
+});
 app.Run();
 
 internal record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
