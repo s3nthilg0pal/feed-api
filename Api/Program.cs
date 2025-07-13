@@ -22,6 +22,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpMetrics();
+app.UseMetricServer();
 app.UseHttpsRedirection();
 
 var summaries = new[]
