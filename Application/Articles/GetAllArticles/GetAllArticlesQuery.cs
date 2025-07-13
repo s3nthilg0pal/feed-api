@@ -21,6 +21,7 @@ public class GetAllArticlesQueryHandler : IRequestHandler<GetAllArticlesQuery, I
     {
         var articles = await _feedContext.Articles
             .Where(a => a.Categories != "news" || a.Categories != "awesome")
+            .Where(a => !string.IsNullOrEmpty(a.Title))
             .Select(a => new ArticleDto()
         {
             Content = a.Content,
