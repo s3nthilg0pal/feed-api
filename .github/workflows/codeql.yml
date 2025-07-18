@@ -5,13 +5,11 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  schedule:
-    - cron: '0 2 * * 1'
 
 jobs:
   analyze:
     name: Analyze C# Code
-    runs-on: [self-hosted]
+    runs-on: [windows-latest]
     permissions:
       actions: read
       contents: read
