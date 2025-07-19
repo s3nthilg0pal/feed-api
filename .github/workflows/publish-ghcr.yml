@@ -7,6 +7,7 @@ on:
 
 env:
   IMAGE_NAME: feedapi
+  GRAPHQL_IMAGE_NAME: feedgraphql
   REGISTRY: ghcr.io
   OWNER: ${{ github.repository_owner }}
 
@@ -35,5 +36,10 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t $REGISTRY/$OWNER/$IMAGE_NAME:latest .
+          docker build -f Dockerfile.rest -t $REGISTRY/$OWNER/$IMAGE_NAME:latest .
           docker push $REGISTRY/$OWNER/$IMAGE_NAME:latest
+
+      - name: Build graphql and push Docker image
+        run: |
+          docker build -f Dockerfile.graphql -t $REGISTRY/$OWNER/$GRAPHQL_IMAGE_NAME:latest .
+          docker push $REGISTRY/$OWNER/$GRAPHQL_IMAGE_NAME:latest
