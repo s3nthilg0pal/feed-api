@@ -10,8 +10,8 @@ public class ArticleDto
     }
 
     public string PublishedAt { get; set; }
-    public IEnumerable<TagDto> Tag { get; set; }
-    public string[] Tags {
+    public IEnumerable<TagDto> Tag { get; set; } = new List<TagDto>();
+    public string[]? Tags {
         get;
         set;
     }
