@@ -10,3 +10,4 @@ images:
 
 patchesStrategicMerge:
   - node-selector.yaml
+  - service-loadbalancer.yaml
