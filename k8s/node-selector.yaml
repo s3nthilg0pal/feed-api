@@ -1,0 +1,8 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: feed-api-rest
+spec:
+  template:
+    spec:
+      nodeName: homserservervm
