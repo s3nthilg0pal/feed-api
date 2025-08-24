@@ -14,6 +14,24 @@ services:
       target: final
     ports:
       - 8083:8080
+    depends_on:
+      - opensearch
+
+  indexer:
+    build:
+      context: .
+      dockerfile: Dockerfile.indexer
+      target: final
+    depends_on:
+      - opensearch
+
+  opensearch:
+    image: opensearchproject/opensearch:2.12.0
+    environment:
+      - discovery.type=single-node
+      - plugins.security.disabled=true
+    ports:
+      - 9200:9200
 
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to
