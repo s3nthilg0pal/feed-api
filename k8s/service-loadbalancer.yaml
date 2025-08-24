@@ -4,3 +4,8 @@ metadata:
   name: feed-api-rest
 spec:
   type: LoadBalancer
+  ports:
+    - name: http
+      port: 80         
+      targetPort: 8080      
+      protocol: TCP
