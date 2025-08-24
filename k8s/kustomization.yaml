@@ -7,3 +7,6 @@ images:
   - name: feed-api-rest
     newName: ghcr.io/s3nthilg0pal/feedapi
     newTag: latest
+
+patchesStrategicMerge:
+  - node-selector.yaml
