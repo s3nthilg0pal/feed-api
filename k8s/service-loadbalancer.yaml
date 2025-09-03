@@ -4,9 +4,9 @@ metadata:
   name: feedapirest
 spec:
   type: LoadBalancer
-  selector:
-    app: feedapirest‎
   ports:
     - name: http
       port: 80         
-      targetPort: 8080     
+      targetPort: 8080
+  selector:
+    app: feedapirest‎
