@@ -16,7 +16,4 @@ spec:
         - name: feedapirest
           image: feed-api-rest
           pports:
-            - containerPort: 8080
-          env:
-            - name: ASPNETCORE_URLS
-              value: http://+:8080
+            - containerPort: 80
