@@ -16,4 +16,4 @@ spec:
         - name: feed-api-rest
           image: feed-api-rest
           ports:
-            - containerPort: 8080
+            - containerPort: 80
