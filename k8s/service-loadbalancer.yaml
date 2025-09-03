@@ -1,10 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: feedapirest
+  name: feedapi
+  labels:
+    app: feedapi
 spec:
-  type: NodePort
+  type: LoadBalancer
+  selector:
+    app: feedapi
   ports:
     - name: http
-      port: 80         
+      port: 80
       targetPort: 8080
