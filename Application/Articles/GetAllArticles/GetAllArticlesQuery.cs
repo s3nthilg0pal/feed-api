@@ -22,6 +22,7 @@ public class GetAllArticlesQueryHandler : IRequestHandler<GetAllArticlesQuery, I
         var articles = await _feedContext.Articles
             .Where(a => a.Categories != "news" || a.Categories != "awesome")
             .Where(a => !string.IsNullOrEmpty(a.Title))
+            .OrderByDescending(a => a.CreatedAt)
             .Select(a => new ArticleDto()
         {
             Content = a.Content,
@@ -31,7 +32,7 @@ public class GetAllArticlesQueryHandler : IRequestHandler<GetAllArticlesQuery, I
             Tags = a.Categories.Split(',', StringSplitOptions.RemoveEmptyEntries),
             Text = a.Text,
             GeneratedOn    = DateTime.Now.ToString("yyyy-MM-dd")
-        }).ToArrayAsync(cancellationToken);
+        }).Take(100).ToArrayAsync(cancellationToken);
 
         return articles;
     }

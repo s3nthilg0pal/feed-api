@@ -11,7 +11,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c08eecae-1c66-4d8e-b4b9-d8f3da474926" name="Changes" comment="" />
+    <list default="true" id="c08eecae-1c66-4d8e-b4b9-d8f3da474926" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Feed/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Feed/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Articles/GetAllArticles/GetAllArticlesQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Articles/GetAllArticles/GetAllArticlesQuery.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +47,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "pulumi",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -53,7 +56,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.SearchIndexService">
+  <component name="RunManager" selected=".NET Launch Settings Profile.Api: https">
     <configuration name="All in Api" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/Api/Api.http">
       <method v="2" />
     </configuration>
@@ -174,6 +177,7 @@
       <workItem from="1755072316135" duration="3522000" />
       <workItem from="1756020818462" duration="543000" />
       <workItem from="1756021629746" duration="715000" />
+      <workItem from="1756935743359" duration="1382000" />
     </task>
     <servers />
   </component>
@@ -202,15 +206,21 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Application/Articles/Search/IndexArticles.cs</url>
           <line>27</line>
-          <properties documentPath="$PROJECT_DIR$/Application/Articles/Search/IndexArticles.cs" containingFunctionPresentation="Method 'Handle'">
+          <properties documentPath="$PROJECT_DIR$/Application/Articles/Search/IndexArticles.cs" containingFunctionPresentation="Method 'Handle'" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Application/Articles/GetAllArticles/GetAllArticlesQuery.cs</url>
+          <line>18</line>
+          <properties documentPath="$PROJECT_DIR$/Application/Articles/GetAllArticles/GetAllArticlesQuery.cs" containingFunctionPresentation="Constructor 'GetAllArticlesQueryHandler'">
             <startOffsets>
-              <option value="719" />
+              <option value="486" />
             </startOffsets>
             <endOffsets>
-              <option value="899" />
+              <option value="487" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="5" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
