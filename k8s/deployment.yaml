@@ -15,5 +15,8 @@ spec:
       containers:
         - name: feed-api-rest
           image: feed-api-rest
-          ports:
-            - containerPort: 80
+          pports:
+            - containerPort: 8080
+          env:
+            - name: ASPNETCORE_URLS
+              value: http://+:8080
