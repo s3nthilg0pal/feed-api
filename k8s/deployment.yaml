@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: feed-api-rest
+  name: feedapirest
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: feed-api-rest
+      app: feedapirest
   template:
     metadata:
       labels:
-        app: feed-api-rest
+        app: feedapirest
     spec:
       containers:
-        - name: feed-api-rest
+        - name: feedapirest
           image: feed-api-rest
           pports:
             - containerPort: 8080
