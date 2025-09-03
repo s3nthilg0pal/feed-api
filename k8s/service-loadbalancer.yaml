@@ -4,6 +4,8 @@ metadata:
   name: feed-api-rest
 spec:
   type: LoadBalancer
+  selector:
+    app: ‎feed-api-rest‎
   ports:
     - name: http
       port: 80         
