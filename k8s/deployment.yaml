@@ -1,19 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: feedapirest
+  name: feedapi
+  labels:
+    app: feedapi
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: feedapirest
+      app: feedapi
   template:
     metadata:
       labels:
-        app: feedapirest
+        app: feedapi
     spec:
       containers:
-        - name: feedapirest
-          image: feed-api-rest
+        - name: feedapi
+          image: ghcr.io/s3nthilg0pal/feedapi:latest
           ports:
-            - containerPort: 80
+            - containerPort: 8080
